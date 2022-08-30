@@ -1,0 +1,1 @@
+Do stuff at your own responsibility. All information is provided “AS IS” with no warranties and confers no rights.
