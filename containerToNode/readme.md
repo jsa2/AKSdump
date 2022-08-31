@@ -6,6 +6,7 @@ In Azure CLI have cluster ready and kubectl installed  (these depedencies are no
 
 ```sh
 az aks create -n myAKSCluster -g myResourceGroup --enable-addons azure-keyvault-secrets-provider --enable-managed-identity
+az aks get-credentials --resource-group $NAMER --name $NAME --admin
 ```
 
 **Kali image**
