@@ -7,7 +7,15 @@ In Azure CLI have cluster ready and kubectl installed  (these depedencies are no
 ```sh
 NAME=aksf-$RANDOM
 NAMER=RG-aks-$NAME
+TAGS="svc=aksdev"
+
+az group create -n $NAMER \
+-l $LOCATION \
+--tags $TAGS
+
 az aks create -n $NAME -g $NAMER --enable-addons azure-keyvault-secrets-provider --enable-managed-identity
+
+az aks get-credentials --resource-group $NAMER --name $NAME --admin
 
 ```
 
