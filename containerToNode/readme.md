@@ -14,7 +14,7 @@ az group create -n $NAMER \
 -l $LOCATION \
 --tags $TAGS
 
-az aks create -n $NAME -g $NAMER --enable-addons azure-keyvault-secrets-provider --enable-managed-identity
+az aks create -n $NAME -g $NAMER 
 
 az aks get-credentials --resource-group $NAMER --name $NAME --admin
 
