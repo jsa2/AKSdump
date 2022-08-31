@@ -5,8 +5,10 @@
 In Azure CLI have cluster ready and kubectl installed  (these depedencies are not explored further in this post)
 
 ```sh
-az aks create -n myAKSCluster -g myResourceGroup --enable-addons azure-keyvault-secrets-provider --enable-managed-identity
-az aks get-credentials --resource-group $NAMER --name $NAME --admin
+NAME=aksf-$RANDOM
+NAMER=RG-aks-$NAME
+az aks create -n $NAME -g $NAMER --enable-addons azure-keyvault-secrets-provider --enable-managed-identity
+
 ```
 
 **Kali image**
