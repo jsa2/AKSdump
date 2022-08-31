@@ -8,6 +8,7 @@ In Azure CLI have cluster ready and kubectl installed  (these depedencies are no
 NAME=aksf-$RANDOM
 NAMER=RG-aks-$NAME
 TAGS="svc=aksdev"
+LOCATION=westeurope
 
 az group create -n $NAMER \
 -l $LOCATION \
