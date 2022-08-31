@@ -18,6 +18,8 @@ az aks create -n $NAME -g $NAMER --enable-addons azure-keyvault-secrets-provider
 
 az aks get-credentials --resource-group $NAMER --name $NAME --admin
 
+echo "az aks get-credentials --resource-group $NAMER --name $NAME --admin" > creds.txt
+
 ```
 
 **Kali image**
